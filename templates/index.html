@@ -1,0 +1,39 @@
+<!-- templates/index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ category }} - {{ difficulty }} - Round {{ round_num }}</title>
+    <!-- Custom Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="game-card">
+            <h1 class="game-title">{{ category }} - {{ difficulty }}</h1>
+            <p class="round">Round {{ round_num }} of {{ total_rounds }}</p>
+            <p class="score">Score: {{ score }}/{{ total_rounds }}</p>
+            <p class="scrambled-word">{{ scrambled_word }}</p>
+            <form method="post">
+                <input type="text" name="guess" class="guess-input" placeholder="Your guess" required autocomplete="off">
+                <!-- Buttons -->
+                <div class="button-group">
+                    <button type="submit" class="btn submit-btn">Submit</button>
+                    <button type="button" class="btn hint-btn" onclick="showHint()">Hint</button>
+                </div>
+            </form>
+            <!-- Hint -->
+            <p class="hint" id="hint" style="display: none;">Hint: {{ hint }}</p>
+        </div>
+    </div>
+    <!-- JavaScript function to display the hint -->
+    <script>
+        function showHint() {
+            document.getElementById('hint').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

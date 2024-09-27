@@ -1,0 +1,43 @@
+soccer
+basketball
+tennis
+baseball
+football
+cricket
+hockey
+volleyball
+swimming
+boxing
+golf
+rugby
+cycling
+gymnastics
+badminton
+karate
+judo
+pingpong
+skiing
+surfing
+athletics
+handball
+lacrosse
+rowing
+sailing
+shooting
+snowboarding
+table tennis
+taekwondo
+triathlon
+water polo
+weightlifting
+wrestling
+archery
+fencing
+motorsport
+snooker
+darts
+equestrian
+kiteboarding
+skateboarding
+snowmobiling
+stand-up paddleboarding

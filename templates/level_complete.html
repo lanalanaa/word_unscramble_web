@@ -1,0 +1,35 @@
+<!-- templates/level_complete.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Level {{ level }} Complete!</title>
+    <!-- Custom Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="game-card">
+            <h1 class="game-title">Level {{ level }} Complete!</h1>
+            <p class="stars">You earned:</p>
+            <p class="stars">
+                {% for i in range(stars) %}
+                    <span class="star">&#9733;</span>
+                {% endfor %}
+                {% for i in range(3 - stars) %}
+                    <span class="star inactive">&#9733;</span>
+                {% endfor %}
+            </p>
+            <p class="score">Total Rounds: {{ total_rounds }}</p>
+            <p class="note">Proceeding to Level {{ level + 1 }}...</p>
+            <div class="button-group">
+                <a href="{{ url_for('index') }}" class="btn next-level-btn">Next Level</a>
+                <a href="{{ url_for('restart') }}" class="btn restart-btn">Restart Game</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

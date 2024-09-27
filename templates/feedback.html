@@ -1,0 +1,25 @@
+<!-- templates/feedback.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Feedback</title>
+    <!-- Custom Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <!-- Auto-refresh to proceed to next round -->
+    <meta http-equiv="refresh" content="2;url={{ url_for('play_game') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="game-card">
+            <h1 class="game-title">{{ category }} - {{ difficulty }}</h1>
+            <p class="message">{{ message }}</p>
+            <p class="score">Current Score: {{ score }}/{{ total_rounds }}</p>
+            <p class="note">Get ready for the next word!</p>
+        </div>
+    </div>
+</body>
+</html>
